@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+// Escrever um algoritmo que:
+// Versão 01: (primeiro hórario de hoje) Solicite ao usuário a quantidade de alunos da turma
+// em seguida solicite a nota de cada aluno em uma prova (0.0 a 10.0) e ao final 
+// apresente a mmaior, a menor e a média aritmética das notas dessa turma.
+
+//Versão 02: ( segundo horário de hj) listar todas as notas informadas
+
+//Versão 03: (para dia 28/02) Implementar alem da nota:
+//Nome, idade, nota e Aprovado (considerar media >=6)
+//Versão 04: Listar o relatorio de alunos aprovados!
+
+int main (){
+	int i, qtdAlunos;
+	float nota, soma, maior, menor;
+	
+	printf ("Informe a quantidade de aluno:");
+	scanf ("%d", &qtdAlunos);
+	soma=0; //essa linha eh obrigatoria por causa da linha 24 (soma=soma+nota;)
+	 for (i=0; i<qtdAlunos; i++) {
+	 	printf ("Informe a nota do %i. aluno:", i+1);
+	 	scanf ("%f", &nota);
+	 	soma=soma+nota;
+	 	
+	 	if (i==0){
+	 		maior=nota;
+	 		menor=nota;
+		 }
+		 else if (maior < nota)
+		 	maior=nota;
+		else if (menor>nota)
+			menor=nota;
+		 
+	 }
+	 printf ("\n Quantidade de alunos na turma: %i", qtdAlunos);
+	 printf ("\n Maior nota da turma: %0.1f ", maior);
+	 printf ("\n Menor nota da turma: %0.1f ", menor);	 
+	 printf ("\n Media das notas da turma: %0.1f ", (soma/qtdAlunos));
+}
