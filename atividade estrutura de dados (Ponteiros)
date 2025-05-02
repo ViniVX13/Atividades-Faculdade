@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+void Trocar(int A, int B){  // Aqui recebemos apenas o valor de Num1 e Num2
+	int auxiliar=A;
+	A=B;
+	B=auxiliar;
+}
+
+void TrocarUsandoPonteiro(int *A, int *B){ //Recebemos o endereço (*) de Num1 na memória 
+	int auxiliar=*A;
+	*A=*B;
+	*B=auxiliar;
+}
+int main(){
+	int Num1, Num2, auxiliar;
+	printf(" Informe o primeiro valor:");
+	scanf("%i", &Num1);
+	printf(" Informe o segundo valor:");
+	scanf("%i", &Num2);
+	printf(" Antes da troca...");
+	printf("\n O valor de Num1 = %i", Num1);
+	printf("\n O valor de Num2 = %i", Num2);
+	printf("\n Realizando a troca sem ponteiros...");
+	Trocar(Num1, Num2); //Aqui passamos apenas o valor de Num1 e Num2
+	printf("\n O valor de Num1 = %i", Num1);
+	printf("\n O valor de Num2 = %i", Num2);
+	printf("\n Realizando a troca com ponteiros...");
+	TrocarUsandoPonteiro(&Num1, &Num2); // Aqui passamos o endereço (&) de Num1 na memória 
+	printf("\n O valor de Num1 = %i", Num1);
+	printf("\n O valor de Num2 = %i", Num2);
+	
+}
