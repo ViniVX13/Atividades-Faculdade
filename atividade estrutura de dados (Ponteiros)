@@ -21,11 +21,11 @@ int main(){
 	printf("\n O valor de Num1 = %i", Num1);
 	printf("\n O valor de Num2 = %i", Num2);
 	printf("\n Realizando a troca sem ponteiros...");
-	Trocar(Num1, Num2); //Aqui passamos apenas o valor de Num1 e Num2
+	Trocar(Num1, Num2); //Aqui passamos apenas o valor de Num1 e Num2 // passagem de parametro por valor
 	printf("\n O valor de Num1 = %i", Num1);
 	printf("\n O valor de Num2 = %i", Num2);
 	printf("\n Realizando a troca com ponteiros...");
-	TrocarUsandoPonteiro(&Num1, &Num2); // Aqui passamos o endereço (&) de Num1 na memória 
+	TrocarUsandoPonteiro(&Num1, &Num2); // Aqui passamos o endereço (&) de Num1 na memória  //passagem de parametro por endereço
 	printf("\n O valor de Num1 = %i", Num1);
 	printf("\n O valor de Num2 = %i", Num2);
 	
