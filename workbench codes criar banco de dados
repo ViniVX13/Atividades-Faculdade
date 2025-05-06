@@ -1,0 +1,12 @@
+create database ProjetoPoo;
+use ProjetoPoo;
+create table cliente(
+codCliente int auto_increment not null,
+nomeCliente varchar (256) not null,
+userCliente varchar(10) not null,
+emailCliente varchar (100) not null,
+telefoneCliente varchar (10) not null,
+primary key (codCliente)
+);
+alter table cliente add senha varchar(10) not null;
+select *from cliente;
